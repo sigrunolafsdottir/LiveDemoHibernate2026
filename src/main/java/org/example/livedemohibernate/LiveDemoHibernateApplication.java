@@ -1,5 +1,9 @@
 package org.example.livedemohibernate;
 
+import org.example.livedemohibernate.Bank.Models.Customer;
+import org.example.livedemohibernate.Bank.Models.KPI;
+import org.example.livedemohibernate.Bank.Repos.CustomerRepo;
+import org.example.livedemohibernate.Bank.Repos.KPIRepo;
 import org.example.livedemohibernate.Book.Book;
 import org.example.livedemohibernate.Book.BookRepo;
 import org.example.livedemohibernate.Tomten.Models.Child;
@@ -18,6 +22,30 @@ public class LiveDemoHibernateApplication {
         SpringApplication.run(LiveDemoHibernateApplication.class, args);
     }
 
+/*
+    @Bean
+    public CommandLineRunner init(KPIRepo kpiRepo, CustomerRepo customerRepo) {
+        return (args) -> {
+            KPI kpi1 = new KPI(45);
+            KPI kpi2 = new KPI(1);
+            KPI kpi3 = new KPI(567);
+
+            kpiRepo.save(kpi1);
+            kpiRepo.save(kpi2);
+            kpiRepo.save(kpi3);
+
+            Customer c1 = new Customer(null, "John", "Drottninggatan", kpi1);
+            Customer c2 = new Customer(null, "Kalle", "Drottninggatan", kpi2);
+            Customer c3 = new Customer(null, "Nisse", "Drottninggatan", kpi3);
+
+            customerRepo.save(c1);
+            customerRepo.save(c2);
+            customerRepo.save(c3);
+
+        };
+    }
+
+*/
 
     /*
     //works if surveillance attribute, in child, cascades

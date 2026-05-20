@@ -19,8 +19,8 @@ public class Kategori {
 
     private String name;
 
-    @OneToMany(mappedBy = "kategori")
-    private List<Customer> customers;
+ //   @OneToMany(mappedBy = "kategori")
+  //  private List<Customer> customers;
 
     public Kategori(String name) {
         this.name = name;

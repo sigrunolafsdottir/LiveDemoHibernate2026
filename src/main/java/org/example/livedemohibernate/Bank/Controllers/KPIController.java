@@ -30,5 +30,10 @@ public class KPIController {
         return kpiRepo.findAll();
     }
 
+    @GetMapping("/helloWorld")
+    public String helloWorld(){
+        return "Hello World";
+    }
+
 
 }
